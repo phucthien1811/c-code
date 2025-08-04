@@ -1,0 +1,29 @@
+#include <iostream>
+#include <stack>
+#include <string>
+using namespace std;
+
+bool isValid(string s) {
+    stack<char> st;
+    for (char c : s) {
+        if (c == '(' || c == '[' || c == '{') {
+            st.push(c);
+        } else {
+            if (st.empty()) return false; 
+            char top = st.top();
+            if ~ {
+                return false;
+            }
+            st.pop(); 
+        }
+    }
+    return st.empty(); 
+}
+
+int main() {
+    string s;
+    cout << "Nhap chuoi ngoac: ";
+    getline(cin, s);
+    cout << (isValid(s) ? "Hop le" : "Khong hop le") << endl;
+    return 0;
+}
