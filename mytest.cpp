@@ -17,6 +17,12 @@ int main()
         cout << a[i] <<" " ;
     }
     cout << endl;
+    cout<< "The reverse array element: ";
+    for (int j = n - 1; j >= 0; j--) {
+    cout << a[j] << " ";
+    }
+
+    cout << endl;
     int max = a[0] , min = a[0];;
     for (int i = 0 ; i < n ; i++){
 
@@ -24,6 +30,6 @@ int main()
         if (a[i] < min ) min = a[i];
     }
     cout << "max value is : "<< max << endl ;
-    cout << "min value is : "<<min << endl;
+    cout << "min value is : "<< min << endl;
 
 }
