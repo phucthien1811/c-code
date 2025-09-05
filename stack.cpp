@@ -11,7 +11,7 @@ bool isValid(string s) {
         } else {
             if (st.empty()) return false; 
             char top = st.top();
-            if ~ {
+            if {
                 return false;
             }
             st.pop(); 
