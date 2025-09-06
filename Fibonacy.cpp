@@ -1,30 +1,29 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
-
-long long fibo_recursive(int n) {
-    if (n == 0) return 0;
-    if (n == 1) return 1;
-    return fibo_recursive(n - 1) + fibo_recursive(n - 2);
+// Đệ quy thuần (rất chậm khi n lớn, chỉ demo)
+long long fib_rec(int n) {
+    if (n <= 1) return n;
+    return fib_rec(n - 1) + fib_rec(n - 2);
 }
 
-
-long long fibo_iterative(int n) {
-    if (n == 0) return 0;
-    if (n == 1) return 1;
-    long long f1 = 0, f2 = 1, fn;
-    for (int i = 2; i <= n; i++) {
-        fn = f1 + f2;
-        f1 = f2;
-        f2 = fn;
+// Vòng lặp O(n), O(1) bộ nhớ
+long long fib_iter(int n) {
+    if (n <= 1) return n;
+    long long a = 0, b = 1;
+    for (int i = 2; i <= n; ++i) {
+        long long c = a + b;
+        a = b; b = c;
     }
-    return f2;
+    return b;
 }
 
 int main() {
-    int n;
-    cin >> n;
-    cout << fibo_recursive(n) << endl;
-    cout << fibo_iterative(n) << endl;
+    ios::sync_with_stdio(false); cin.tie(nullptr);
+    int n; 
+    if (!(cin >> n)) return 0;
+
+    cout << fib_rec(n) << "\n";
+    cout << fib_iter(n) << "\n";
     return 0;
 }
