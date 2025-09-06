@@ -1,14 +1,14 @@
 #include <iostream>
 using namespace std;
 
-// Đệ quy
+
 long long fibo_recursive(int n) {
     if (n == 0) return 0;
     if (n == 1) return 1;
     return fibo_recursive(n - 1) + fibo_recursive(n - 2);
 }
 
-// Vòng lặp
+
 long long fibo_iterative(int n) {
     if (n == 0) return 0;
     if (n == 1) return 1;
