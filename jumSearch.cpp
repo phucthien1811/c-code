@@ -1,9 +1,10 @@
 #include <iostream>
+#include <cmath>
 using namespace std;
 
 
 int jumSearch(int a[],int n, int k){
-    int d = 3;
+    d = (int)sqrt(n);
     int i = 0;
     int j = i + d;
     while ( j < n && a[j] < k){
