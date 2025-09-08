@@ -8,8 +8,8 @@ int jumSearch(int a[],int n, int k){
     int i = 0;
     int j = i + d;
     while ( j < n && a[j] < k){
-        j = j + d;
-        i = i + d;
+        j = j + d;         // i = j 
+        i = i + d;         // j = j + d
     }
     if (j >= n){
         j = n - 1;
